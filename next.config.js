@@ -2,6 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   outputFileTracingRoot: __dirname,
+  output: 'standalone',
+  env: {
+    CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+    COSMOS_CONNECTION_STRING: process.env.COSMOS_CONNECTION_STRING,
+    COSMOS_DATABASE: process.env.COSMOS_DATABASE,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
+    UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+    ACTIVE_CAMPAIGN_API_URL: process.env.ACTIVE_CAMPAIGN_API_URL,
+    ACTIVE_CAMPAIGN_API_KEY: process.env.ACTIVE_CAMPAIGN_API_KEY,
+    WELCOME_EMAIL_AUTOMATION_ID: process.env.WELCOME_EMAIL_AUTOMATION_ID,
+    PRINTIFY_API_KEY: process.env.PRINTIFY_API_KEY,
+    PRINTIFY_SHOP_ID: process.env.PRINTIFY_SHOP_ID,
+  },
   images: {
     domains: ['howtostartanllc.com', 'images.unsplash.com'],
     remotePatterns: [
