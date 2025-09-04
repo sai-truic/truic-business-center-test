@@ -1,5 +1,5 @@
 // app/api/completion/route.js
-export const runtime = 'edge';
+export const runtime = 'force-dynamic';
 
 import { streamText } from "ai"
 import { createOpenAI } from '@ai-sdk/openai';
