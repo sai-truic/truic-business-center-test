@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, { useRef, useEffect, useMemo, Fragment } from 'react';
 import { TableRow } from './TableRow';
 import { TableHeader } from './TableHeader';
 import { useTableState } from './useTableState';
@@ -311,7 +311,7 @@ export const DataTable = ({ id, columns, data, isEditable, onDataChange, stateVa
           {/*console.log("Local Data Before Deep Copy :", processedData)*/}
           {/*console.log("Local Data Deep Copy :", deepCopyAndMap(processedData))*/}
           {processedReferences.map((row, rowIndex) => (
-            <>
+            <Fragment key={rowIndex}>
             <TableRow
               key={rowIndex}
               row={row}
@@ -333,7 +333,7 @@ export const DataTable = ({ id, columns, data, isEditable, onDataChange, stateVa
               setHasReloaded={setHasReloaded}
               handleInfoClick={handleInfoClick}
             />
-            </>
+            </Fragment>
           ))}
         </tbody>
       </table>

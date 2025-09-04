@@ -1,7 +1,11 @@
 {
-  "name": "truic-business-center",
+  "name": "truic-business-center-test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -43,10 +47,7 @@
     "jotai": "^2.13.1",
     "lodash": "^4.17.21",
     "lucide-react": "^0.542.0",
-    "mongodb": "^6.19.0",
-    "mysql2": "^3.14.4",
     "next": "^15.5.2",
-    "pg": "^8.16.3",
     "postcss": "^8.5.6",
     "qrcode": "^1.5.4",
     "qrcode.react": "^4.2.0",
@@ -61,8 +62,6 @@
     "react-responsive": "^10.0.1",
     "react-scroll": "^1.9.3",
     "react-usa-map": "^1.5.0",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
@@ -104,7 +103,6 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.13",
     "@types/lodash": "^4.17.16",
-    "@types/pg": "^8.11.16",
     "@types/qrcode": "^1.5.5",
     "@types/react-scroll": "^1.8.10",
     "@types/uuid": "^9.0.1",
