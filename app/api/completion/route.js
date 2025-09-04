@@ -1,5 +1,5 @@
 // app/api/completion/route.js
-export const runtime = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 import { streamText } from "ai"
 import { createOpenAI } from '@ai-sdk/openai';

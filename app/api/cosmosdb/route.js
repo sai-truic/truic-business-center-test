@@ -3,7 +3,7 @@ import { getAuth } from '@clerk/nextjs/server';
 import { v4 as uuidv4 } from 'uuid';
 import { CosmosClient } from '@azure/cosmos';
 
-export const runtime = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 const cosmosConnectionString = process.env.COSMOS_CONNECTION_STRING;
 const cosmosDatabase = process.env.COSMOS_DATABASE;
