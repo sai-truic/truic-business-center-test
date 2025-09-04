@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'qr-code.css';
+
+:root {
+  --background: 37 33% 98%;
+  --foreground: 200 26% 22%;
+  --card: 37 33% 98%;
+  --card-foreground: 200 26% 22%;
+  --popover: 37 33% 98%;
+  --popover-foreground: 200 26% 22%;
+  --primary: 26 89% 48%;
+  --primary-foreground: 37 33% 98%;
+  --secondary: 187 35% 29%;
+  --secondary-foreground: 37 33% 98%;
+  --muted: 200 26% 22%;
+  --muted-foreground: 200 18% 46%;
+  --accent: 187 35% 29%;
+  --accent-foreground: 37 33% 98%;
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 37 33% 98%;
+  --border: 200 18% 46%;
+  --input: 200 18% 46%;
+  --ring: 26 89% 48%;
+  --radius: 0.5rem;
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Karla';
+  font-style:normal;
+  font-weight: 700;
+  src: url('/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PermanentMarker';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/PermanentMarker-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+  }
+
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Improve text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle animation for hover effects */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Glossy effect for buttons and cards */
+.glossy-button {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.glossy-button:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15) 100%);
+}
+
+.glossy-card {
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 47%, rgba(0,0,0,0.05) 53%, rgba(0,0,0,0.1) 100%);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.glossy-card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.15);
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 47%, rgba(0,0,0,0.05) 53%, rgba(0,0,0,0.15) 100%);
+}
+
+.custom-date-shadow {                                                                                       
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 5px rgba(0, 0, 0, 0.1);                            
+}  
+
+.glossy-date {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.glossy-date:hover:not(:disabled) {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15) 100%);
+}
+
+.glossy-picker {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.glossy-picker:hover:not(:disabled) {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15) 100%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.glossy-selector {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.glossy-text {
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.glossy-nav-button {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.1) 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.glossy-nav-button:hover:not(:disabled) {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15) 100%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* Improved text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hide scrollbar for modern browsers (Chrome, Safari, Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Subtle gradient fade at top and bottom */
+.scroll-fade {
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+ /* In app/globals.css */  
+ .main-content-panel-styling {
+  @apply p-6 md:py-9 px-8 rounded-xl border border-[#E4E4E7] relative overflow-hidden;
+ }                                                           
+ 
+ .main-content-border {
+  @apply rounded-xl border border-[#E4E4E7];
+ }
+
+ #QRCode {                                                                                                                                                                 
+  min-width: 256px;                                                                                                                                                       
+  min-height: 256px;                                                                                                                                                      
+  display: flex;                                                                                                                                                          
+  align-items: center;                                                                                                                                                    
+  justify-content: center;                                                                                                                                                
+}                                                                                                                                                                         
+                                                                                                                                                                          
+#QRCode canvas,                                                                                                                                                           
+#QRCode svg {                                                                                                                                                             
+  width: 100% !important;                                                                                                                                                 
+  height: 100% !important;                                                                                                                                                
+} 
+

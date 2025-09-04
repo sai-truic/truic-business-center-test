@@ -1,0 +1,146 @@
+{
+  "userId": "_USER_ID_",
+  "created": "_DATE_",
+  "modified": "_DATE_",
+  "__submit": "False",
+  "companyOverview": {
+    "companyName": "",
+    "industry": "",
+    "productOrService": "",
+    "targetMarket": "",
+    "missionStatement": "",
+    "uniqueValueProposition": ""
+  },
+  "marketAnalysis": {
+    "marketSize": "",
+    "marketGrowth": "",
+    "marketSegmentation": "",
+    "keyTrends": "",
+    "regulatoryEnvironment": ""
+  },
+  "competitorAnalysis": {
+    "directCompetitors": [
+      {
+        "name": "",
+        "overview": "",
+        "marketShare": "",
+        "targetAudience": "",
+        "productOffering": {
+          "description": "",
+          "pricing": "",
+          "quality": ""
+        },
+        "strengths": [""],
+        "weaknesses": [""],
+        "marketingStrategy": "",
+        "onlinePresence": {
+          "website": "",
+          "socialMedia": [""]
+        },
+        "customerService": "",
+        "brandReputation": "",
+        "financialPerformance": "",
+        "innovationCapability": ""
+      }
+    ],
+    "indirectCompetitors": [
+      {
+        "name": "",
+        "overview": "",
+        "productOrService": "",
+        "targetMarket": "",
+        "potentialThreat": "",
+        "differentiationFactors": [""]
+      }
+    ],
+    "competitiveLandscape": {
+      "marketConcentration": "",
+      "entryBarriers": "",
+      "exitBarriers": "",
+      "supplierPower": "",
+      "buyerPower": "",
+      "substituteThreat": ""
+    }
+  },
+  "swotAnalysis": {
+    "strengths": [""],
+    "weaknesses": [""],
+    "opportunities": [""],
+    "threats": [""]
+  },
+  "competitiveAdvantage": {
+    "uniqueSellingProposition": "",
+    "coreCompetencies": [""],
+    "sustainabilityOfAdvantage": "",
+    "barriersToDuplication": [""]
+  },
+  "marketPositioning": {
+    "currentPosition": "",
+    "desiredPosition": "",
+    "positioningStrategy": "",
+    "brandPerception": "",
+    "differentiationStrategy": ""
+  },
+  "competitiveStrategies": {
+    "overallStrategy": "",
+    "pricingStrategy": {
+      "approach": "",
+      "justification": ""
+    },
+    "productStrategy": {
+      "development": "",
+      "differentiation": ""
+    },
+    "marketingStrategy": {
+      "targetAudience": "",
+      "channels": [""],
+      "messaging": ""
+    },
+    "distributionStrategy": {
+      "channels": [""],
+      "coverage": ""
+    },
+    "customerRetentionStrategy": ""
+  },
+  "benchmarking": {
+    "keyMetrics": [""],
+    "performanceComparison": "",
+    "bestPractices": [""],
+    "gapAnalysis": ""
+  },
+  "technologyAssessment": {
+    "currentTechStack": "",
+    "competitorTechnology": "",
+    "emergingTechnologies": "",
+    "technologyStrategy": ""
+  },
+  "customerInsights": {
+    "customerNeeds": [""],
+    "customerFeedback": "",
+    "buyingBehavior": "",
+    "loyaltyFactors": [""]
+  },
+  "futureOutlook": {
+    "marketTrends": [""],
+    "emergingCompetitors": [""],
+    "potentialDisruptions": [""],
+    "adaptationStrategies": [""]
+  },
+  "riskAssessment": {
+    "competitiveRisks": [""],
+    "marketRisks": [""],
+    "mitigationStrategies": [""]
+  },
+  "collaborationOpportunities": {
+    "potentialPartnerships": [""],
+    "strategicAlliances": [""]
+  },
+  "conclusionAndRecommendations": {
+    "keySummaryPoints": [""],
+    "competitiveAdvantages": [""],
+    "areasForImprovement": [""],
+    "actionableRecommendations": [""],
+    "nextSteps": [""],
+    "timelineForImplementation": ""
+  }
+}

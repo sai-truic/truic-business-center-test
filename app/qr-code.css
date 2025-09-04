@@ -1,0 +1,185 @@
+/* QR Code Component Styles */
+.qr-page-container {
+  @apply min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 py-4 sm:py-6 md:py-10 lg:py-16;
+}
+
+/* Settings Section Styles */
+.settings-section {
+  @apply bg-white rounded-xl border-2 border-indigo-100 shadow-sm hover:border-indigo-200 transition-all duration-200 overflow-visible;
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Add smooth scroll shadows */
+.scroll-shadow {
+  background:
+    linear-gradient(#ffffff 33%, rgba(255,255,255, 0)),
+    linear-gradient(rgba(255,255,255, 0), #ffffff 66%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(0,0,0,0.1), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,0.1), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved focus styles */
+.settings-input:focus {
+  @apply ring-2 ring-indigo-500/20 border-indigo-500;
+  outline: none;
+}
+
+/* Enhanced hover effects */
+.settings-hover {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.settings-hover:hover {
+  @apply transform -translate-y-0.5;
+}
+
+.settings-button {
+  @apply w-full flex items-center justify-between p-4 text-left hover:bg-gray-50/50 rounded-t-xl transition-all duration-200;
+}
+
+.settings-icon-container {
+  @apply p-2.5 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg shadow-sm;
+}
+
+.settings-icon {
+  @apply w-5 h-5 text-indigo-600;
+}
+
+.settings-content {
+  @apply flex items-center gap-4;
+}
+
+.settings-text {
+  @apply font-semibold text-gray-900;
+}
+
+.settings-description {
+  @apply text-sm text-gray-500 mt-0.5;
+}
+
+.settings-chevron {
+  @apply h-5 w-5 text-indigo-400 transition-transform duration-200;
+}
+
+.settings-panel {
+  @apply px-4 py-4 border-t border-gray-100;
+}
+
+.qr-content-container {
+  @apply container mx-auto px-2 sm:px-4 md:px-6 lg:px-8;
+}
+
+.qr-main-card {
+  @apply bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10;
+}
+
+.qr-title {
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-800 mb-8 text-center;
+}
+
+.qr-title-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600;
+}
+
+.qr-flex-container {
+  @apply flex flex-col lg:flex-row items-stretch gap-8;
+}
+
+.qr-left-column {
+  @apply flex-1 flex flex-col overflow-y-auto;
+}
+
+.qr-right-column {
+  @apply lg:w-5/12 flex flex-col;
+}
+
+.qr-preview-container {
+  @apply flex flex-col items-center;
+}
+
+.qr-code-wrapper {
+  @apply border shadow-2xl mb-6 p-6 rounded-xl bg-white;
+}
+
+.qr-button-container {
+  @apply w-full flex items-center gap-3;
+}
+
+.qr-download-button {
+  @apply flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300;
+}
+
+.qr-share-button {
+  @apply flex items-center justify-center px-6 py-3 text-indigo-600 font-bold hover:text-indigo-700 transition-colors;
+}
+
+/* Additional QR Code Styles */
+.qr-settings-button {
+  @apply rounded-full p-1 hover:bg-gray-100 transition-colors;
+}
+
+.qr-settings-icon {
+  @apply h-5 w-5 text-gray-500;
+}
+
+.qr-product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.qr-product-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden relative;
+}
+
+.qr-customize-button {
+  @apply absolute top-2 right-2 p-2 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gray-50;
+}
+
+.qr-product-image {
+  @apply w-full h-full object-center object-cover;
+}
+
+.qr-product-content {
+  @apply p-4;
+}
+
+.qr-product-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.qr-product-description {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.qr-product-footer {
+  @apply mt-4 flex justify-between items-center;
+}
+
+.qr-product-price {
+  @apply text-lg font-medium text-gray-900;
+}
+
+.qr-view-button {
+  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700;
+}
